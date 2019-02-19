@@ -18,6 +18,44 @@ h1 {
   margin: 0;
 }
 
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.left-nav {
+  position: relative;
+  width: 20vw;
+}
+
+.right-container {
+  position: relative;
+  margin-left: 10vw;
+  width: 50vw;
+}
+
+.photo {
+  height: 900px;
+  width: 600px;
+  background-color: black;
+  margin-bottom: 30px;
+}
+
+.logo-container {
+  position: fixed;
+  height: auto;
+  overflow: auto;
+  margin-top: 50px;
+}
+
+.description {
+  position: fixed;
+  top: 250px;
+  width: 20vw;
+}
+
 .first_layer {
   -webkit-text-fill-color: rgb(255, 243, 130, .3);
   -webkit-text-stroke: 2px rgb(255, 243, 130, 1);
@@ -25,12 +63,15 @@ h1 {
 
 .second_layer {
   -webkit-text-stroke: 2px rgb(255, 243, 130, .7);
+  margin-top: -43px;
 }
 
 .third_layer {
   -webkit-text-stroke: 2px rgb(255, 243, 130, .4);
+  margin-top: -43px;
 }
 
 .fourth_layer {
   -webkit-text-stroke: 2px rgb(255, 243, 130, .1);
+  margin-top: -43px;
 }
