@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700');
+@font-face {
+  font-family: Heading-Pro-Wide;
+  src: url('./assets/fonts/Heading-Pro-Wide-Black-trial.ttf');
+  src: url('./assets/fonts/Heading-Pro-Wide-Black-trial.ttf') format('truetype'),
+}
+
+body {
+  background: #48633E;
+  color: #FFF382;
+}
+
+h1 {
+  font-family: Heading-Pro-Wide, sans-serif;
+  font-size: 66px;
+  user-select: none;
+  letter-spacing: 2px;
+  color: transparent;
+  margin: 0;
+}
+
+p {
+  font-family: 'EB Garamond', 'serif';
+  font-weight: 500;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.left-nav {
+  position: relative;
+  width: 20vw;
+}
+
+.right-container {
+  position: relative;
+  margin-left: 5vw;
+  width: 55vw;
+}
+
+.logo-container {
+  position: fixed;
+  height: auto;
+  overflow: auto;
+  margin-top: 50px;
+}
+
+.description {
+  position: fixed;
+  top: 250px;
+  width: 20vw;
+}
+
+.description p {
+  font-size: 18px;
+}
+
+.first_layer {
+  -webkit-text-fill-color: rgb(255, 243, 130, .3);
+  -webkit-text-stroke: 2px rgb(255, 243, 130, 1);
+}
+
+.second_layer {
+  -webkit-text-stroke: 2px rgb(255, 243, 130, .7);
+  margin-top: -43px;
+}
+
+.third_layer {
+  -webkit-text-stroke: 2px rgb(255, 243, 130, .4);
+  margin-top: -43px;
+}
+
+.fourth_layer {
+  -webkit-text-stroke: 2px rgb(255, 243, 130, .1);
+  margin-top: -43px;
+}
+
+.photo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1200px;
+  margin-bottom: 30px;
+}
+
+.photo {
+  height: 900px;
+  width: 600px;
+  background-color: black;
+  border: 2px rgb(255, 243, 130, 1) solid;
+}
+
+.subject-information-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.subject_title {
+  width: fit-content;
+  margin-top: 300px;
+  margin-left: -80px;
+  text-transform: uppercase;
+  z-index: 1;
+  -webkit-text-stroke: 2px rgb(255, 243, 130, 1);
+}
+
+.subject_title:hover {
+  -webkit-text-fill-color: rgb(255, 243, 130, .3);
+  -webkit-text-stroke: 3px rgb(255, 243, 130, 1);
+}
+
+.highlight {
+  height: 30px;
+  width: 210px;
+  margin-top: -30px;
+  margin-left: -90px;
+  background-color: rgb(242, 114, 114, .38);
+}
+
+.subject_blurb {
+  font-size: 18px;
+  width: 175px;
+  margin-left: 20px;
+}
