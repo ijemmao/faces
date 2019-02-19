@@ -42,14 +42,6 @@ p {
   width: 50vw;
 }
 
-.photo {
-  height: 900px;
-  width: 600px;
-  background-color: black;
-  margin-bottom: 30px;
-  border: 2px rgb(255, 243, 130, 1) solid;
-}
-
 .logo-container {
   position: fixed;
   height: auto;
@@ -81,4 +73,32 @@ p {
 .fourth_layer {
   -webkit-text-stroke: 2px rgb(255, 243, 130, .1);
   margin-top: -43px;
+}
+
+.photo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1200px;
+  margin-bottom: 30px;
+}
+
+.photo {
+  height: 900px;
+  width: 600px;
+  background-color: black;
+  border: 2px rgb(255, 243, 130, 1) solid;
+}
+
+.subject_title {
+  width: fit-content;
+  margin-top: 300px;
+  margin-left: -80px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px rgb(255, 243, 130, 1);
+}
+
+
+.subject_title:hover {
+  -webkit-text-stroke: 3px rgb(255, 243, 130, 1);
 }
