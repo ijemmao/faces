@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700');
 @font-face {
   font-family: Heading-Pro-Wide;
-  src: url('./assets/fonts/Heading-Pro-Wide-Black-trial.ttf');
-  src: url('./assets/fonts/Heading-Pro-Wide-Black-trial.ttf') format('truetype'),
+  src: url('../assets/fonts/Heading-Pro-Wide-Black-trial.ttf');
+  src: url('../assets/fonts/Heading-Pro-Wide-Black-trial.ttf') format('truetype'),
 }
 
 body {
