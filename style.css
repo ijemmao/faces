@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700');
 @font-face {
   font-family: Heading-Pro-Wide;
   src: url('./assets/fonts/Heading-Pro-Wide-Black-trial.ttf');
@@ -16,6 +17,11 @@ h1 {
   letter-spacing: 2px;
   color: transparent;
   margin: 0;
+}
+
+p {
+  font-family: 'EB Garamond', 'serif';
+  font-weight: 500;
 }
 
 .main-container {
@@ -41,6 +47,7 @@ h1 {
   width: 600px;
   background-color: black;
   margin-bottom: 30px;
+  border: 2px rgb(255, 243, 130, 1) solid;
 }
 
 .logo-container {
