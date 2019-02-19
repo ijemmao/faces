@@ -16,9 +16,11 @@ h1 {
   user-select: none;
   letter-spacing: 2px;
   color: transparent;
+  text-transform: uppercase;
   margin: 0;
 }
 
+/* Home View  */
 p {
   font-family: 'EB Garamond', 'serif';
   font-weight: 500;
@@ -125,4 +127,34 @@ p {
   font-size: 18px;
   width: 175px;
   margin-left: 20px;
+}
+
+/* Detailed View */
+
+navbar {
+  position: fixed;
+  display: flex;
+  width: 96%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5vh;
+}
+
+.back-button {
+  width: 80px;
+}
+
+.first_name_layer {
+  -webkit-text-fill-color: rgb(255, 243, 130, .3);
+  -webkit-text-stroke: 2px rgb(255, 243, 130, 1);
+}
+
+.second_name_layer {
+  -webkit-text-stroke: 2px rgb(255, 243, 130, .4);
+  margin-top: -60px;
+}
+
+.third_name_layer {
+  -webkit-text-stroke: 2px rgb(255, 243, 130, .1);
+  margin-top: -60px;
 }
