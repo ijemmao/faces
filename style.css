@@ -109,6 +109,7 @@ p {
 }
 
 .subject_title:hover {
+  -webkit-text-fill-color: rgb(255, 243, 130, .3);
   -webkit-text-stroke: 3px rgb(255, 243, 130, 1);
 }
 
