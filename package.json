@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ijemmao/faces/issues"
   },
-  "homepage": "https://github.com/ijemmao/faces#readme"
+  "homepage": "https://github.com/ijemmao/faces#readme",
+  "devDependencies": {
+    "barba.js": "^1.0.0"
+  }
 }

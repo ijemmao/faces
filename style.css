@@ -1,0 +1,36 @@
+@font-face {
+  font-family: Heading-Pro-Wide;
+  src: url('./assets/fonts/Heading-Pro-Wide-Black-trial.ttf');
+  src: url('./assets/fonts/Heading-Pro-Wide-Black-trial.ttf') format('truetype'),
+}
+
+body {
+  background: #48633E;
+  color: #FFF382;
+}
+
+h1 {
+  font-family: Heading-Pro-Wide, sans-serif;
+  font-size: 66px;
+  user-select: none;
+  letter-spacing: 2px;
+  color: transparent;
+  margin: 0;
+}
+
+.first_layer {
+  -webkit-text-fill-color: rgb(255, 243, 130, .3);
+  -webkit-text-stroke: 2px rgb(255, 243, 130, 1);
+}
+
+.second_layer {
+  -webkit-text-stroke: 2px rgb(255, 243, 130, .7);
+}
+
+.third_layer {
+  -webkit-text-stroke: 2px rgb(255, 243, 130, .4);
+}
+
+.fourth_layer {
+  -webkit-text-stroke: 2px rgb(255, 243, 130, .1);
+}
