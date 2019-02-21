@@ -95,11 +95,13 @@ p {
   width: 600px;
   background-color: black;
   border: 2px rgb(255, 243, 130, 1) solid;
+  cursor: pointer;
 }
 
 .subject-information-container {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .subject_title {
@@ -134,11 +136,12 @@ p {
 
 navbar {
   position: fixed;
-  display: flex;
+  display: none;
+  opacity: 0;
   width: 96%;
   flex-direction: row;
   justify-content: space-between;
-  padding: 5vh;
+  padding: 0vh 5vh;
 }
 
 .back-button {

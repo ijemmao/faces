@@ -2875,6 +2875,27 @@ var scrollReveal = (0, _scrollreveal.default)({
   delay: 200,
   easing: 'easeOutQuad'
 });
+Array.from(document.getElementsByClassName('photo-container')).map(function (el) {
+  el.addEventListener('click', function (e) {
+    var navbar = document.getElementsByTagName('navbar')[0];
+    navbar.style.display = 'flex';
+    (0, _animejs.default)({
+      targets: 'navbar',
+      opacity: 1,
+      translateY: 50,
+      duration: 1100,
+      delay: 700,
+      begin: function begin(anim) {
+        (0, _animejs.default)({
+          targets: '.left-nav, .right-container',
+          duration: 4000,
+          opacity: 0,
+          translateX: -1000
+        });
+      }
+    });
+  });
+});
 scrollReveal.reveal('.photo-container', {
   delay: 100
 });
