@@ -48,13 +48,14 @@ p {
   position: fixed;
   height: auto;
   overflow: auto;
-  margin-top: 50px;
+  opacity: 0;
 }
 
 .description {
   position: fixed;
   top: 250px;
   width: 20vw;
+  opacity: 0;
 }
 
 .description p {
