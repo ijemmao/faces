@@ -1,6 +1,9 @@
 'use strict';
 
 import anime from 'animejs';
+import ScrollReveal from 'scrollreveal';
+
+const scrollReveal = ScrollReveal({ reset: true });
 
 // Logo animations
 anime({
@@ -20,3 +23,5 @@ anime({
   delay: 200,
   easing: 'easeOutQuad'
 });
+
+scrollReveal.reveal('.photo-container', { delay: 100 });
