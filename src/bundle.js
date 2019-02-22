@@ -2857,7 +2857,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // DOM Elements
 var leftNav = document.getElementsByClassName('left-nav')[0];
-var rightContainer = document.getElementsByClassName('right-container')[0];
+var rightContainer = document.getElementsByClassName('right-container')[0]; // Functions
+
+var removeHome = function removeHome() {
+  document.getElementsByClassName('left-nav')[0].remove();
+  document.getElementsByClassName('right-container')[0].remove();
+};
+
+var addHome = function addHome() {
+  document.getElementsByClassName('main-container')[0].appendChild(leftNav);
+  document.getElementsByClassName('main-container')[0].appendChild(rightContainer);
+};
+
 var scrollReveal = (0, _scrollreveal.default)({
   reset: true
 }); // Logo animations
@@ -2897,8 +2908,7 @@ Array.from(document.getElementsByClassName('photo-container')).map(function (el)
           translateX: -1000,
           easing: 'easeInQuad',
           complete: function complete() {
-            document.getElementsByClassName('left-nav')[0].remove();
-            document.getElementsByClassName('right-container')[0].remove();
+            removeHome();
           }
         });
       }
@@ -2908,8 +2918,7 @@ Array.from(document.getElementsByClassName('photo-container')).map(function (el)
 
 var backButton = document.getElementsByClassName('back-button')[0];
 backButton.addEventListener('click', function (e) {
-  document.body.appendChild(leftNav);
-  document.body.appendChild(rightContainer);
+  addHome();
   (0, _animejs.default)({
     targets: 'navbar',
     opacity: 0,

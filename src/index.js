@@ -7,6 +7,17 @@ import ScrollReveal from 'scrollreveal';
 const leftNav = document.getElementsByClassName('left-nav')[0];
 const rightContainer = document.getElementsByClassName('right-container')[0];
 
+// Functions
+let removeHome = () => {
+  document.getElementsByClassName('left-nav')[0].remove();
+  document.getElementsByClassName('right-container')[0].remove();
+}
+
+let addHome = () => {
+  document.getElementsByClassName('main-container')[0].appendChild(leftNav);
+  document.getElementsByClassName('main-container')[0].appendChild(rightContainer);
+}
+
 const scrollReveal = ScrollReveal({ reset: true });
 
 // Logo animations
@@ -47,8 +58,7 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
           translateX: -1000,
           easing: 'easeInQuad',
           complete: () => {
-            document.getElementsByClassName('left-nav')[0].remove();
-            document.getElementsByClassName('right-container')[0].remove();
+            removeHome();
           }
         })
       }
@@ -59,8 +69,7 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
 // Back button
 const backButton = document.getElementsByClassName('back-button')[0];
 backButton.addEventListener('click', (e) => {
-  document.body.appendChild(leftNav);
-  document.body.appendChild(rightContainer);
+  addHome();
   anime({
     targets: 'navbar',
     opacity: 0,
