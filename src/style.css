@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700');
 @font-face {
   font-family: Heading-Pro-Wide;
-  src: url('./assets/fonts/Heading-Pro-Wide-Black-trial.ttf');
-  src: url('./assets/fonts/Heading-Pro-Wide-Black-trial.ttf') format('truetype'),
+  src: url('../assets/fonts/Heading-Pro-Wide-Black-trial.ttf');
+  src: url('../assets/fonts/Heading-Pro-Wide-Black-trial.ttf') format('truetype'),
 }
 
 body {
@@ -16,8 +16,11 @@ h1 {
   user-select: none;
   letter-spacing: 2px;
   color: transparent;
+  text-transform: uppercase;
   margin: 0;
 }
+
+/* Home View  */
 
 p {
   font-family: 'EB Garamond', 'serif';
@@ -46,17 +49,22 @@ p {
   position: fixed;
   height: auto;
   overflow: auto;
-  margin-top: 50px;
+  opacity: 0;
 }
 
 .description {
   position: fixed;
   top: 250px;
   width: 20vw;
+  opacity: 0;
 }
 
 .description p {
   font-size: 18px;
+}
+
+p::selection {
+  background-color: rgb(242, 114, 114, .38);
 }
 
 .first_layer {
@@ -83,7 +91,6 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 1200px;
   margin-bottom: 30px;
 }
 
@@ -92,11 +99,13 @@ p {
   width: 600px;
   background-color: black;
   border: 2px rgb(255, 243, 130, 1) solid;
+  cursor: pointer;
 }
 
 .subject-information-container {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .subject_title {
@@ -125,4 +134,38 @@ p {
   font-size: 18px;
   width: 175px;
   margin-left: 20px;
+}
+
+/* Detailed View */
+
+navbar {
+  position: fixed;
+  display: flex;
+  opacity: 0;
+  width: 96%;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 1;
+  transform: translateY(-100px);
+  padding: 0vh 5vh;
+}
+
+.back-button {
+  width: 80px;
+  cursor: pointer;
+}
+
+.first_name_layer {
+  -webkit-text-fill-color: rgb(255, 243, 130, .3);
+  -webkit-text-stroke: 2px rgb(255, 243, 130, 1);
+}
+
+.second_name_layer {
+  -webkit-text-stroke: 2px rgb(255, 243, 130, .4);
+  margin-top: -60px;
+}
+
+.third_name_layer {
+  -webkit-text-stroke: 2px rgb(255, 243, 130, .1);
+  margin-top: -60px;
 }
