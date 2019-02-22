@@ -140,12 +140,13 @@ p::selection {
 
 navbar {
   position: fixed;
-  display: none;
+  display: flex;
   opacity: 0;
   width: 96%;
   flex-direction: row;
   justify-content: space-between;
   z-index: 1;
+  transform: translateY(-100px);
   padding: 0vh 5vh;
 }
 

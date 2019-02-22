@@ -6,6 +6,8 @@ import ScrollReveal from 'scrollreveal';
 // DOM Elements
 const leftNav = document.getElementsByClassName('left-nav')[0];
 const rightContainer = document.getElementsByClassName('right-container')[0];
+const navBar = document.getElementsByTagName('navbar')[0];
+console.log(navBar);
 
 // Functions
 let removeHome = () => {
@@ -16,6 +18,14 @@ let removeHome = () => {
 let addHome = () => {
   document.getElementsByClassName('main-container')[0].appendChild(leftNav);
   document.getElementsByClassName('main-container')[0].appendChild(rightContainer);
+}
+
+let removeNavBar = () => {
+  document.getElementsByTagName('navbar')[0].remove();
+}
+
+let addNavBar = () => {
+  document.getElementsByClassName('main-container')[0].appendChild(navBar);
 }
 
 const scrollReveal = ScrollReveal({ reset: true });
@@ -42,8 +52,7 @@ anime({
 // Transition after clicking specific image
 Array.from(document.getElementsByClassName('photo-container')).map((el) => {
   el.addEventListener('click', (e) => {
-    const navbar = document.getElementsByTagName('navbar')[0];
-    navbar.style.display = 'flex';
+    addNavBar();
     anime({
       targets: 'navbar',
       opacity: 1,
@@ -56,7 +65,7 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
           duration: 700,
           opacity: 0,
           translateX: -1000,
-          easing: 'easeInQuad',
+          easing: 'easeInCubic',
           complete: () => {
             removeHome();
           }
@@ -77,6 +86,7 @@ backButton.addEventListener('click', (e) => {
     duration: 200,
     easing: 'linear',
     complete: () => {
+      removeNavBar();
       anime({
         targets: '.left-nav, .right-container',
         duration: 1000,

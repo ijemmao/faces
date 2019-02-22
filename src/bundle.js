@@ -2857,7 +2857,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // DOM Elements
 var leftNav = document.getElementsByClassName('left-nav')[0];
-var rightContainer = document.getElementsByClassName('right-container')[0]; // Functions
+var rightContainer = document.getElementsByClassName('right-container')[0];
+var navBar = document.getElementsByTagName('navbar')[0];
+console.log(navBar); // Functions
 
 var removeHome = function removeHome() {
   document.getElementsByClassName('left-nav')[0].remove();
@@ -2867,6 +2869,14 @@ var removeHome = function removeHome() {
 var addHome = function addHome() {
   document.getElementsByClassName('main-container')[0].appendChild(leftNav);
   document.getElementsByClassName('main-container')[0].appendChild(rightContainer);
+};
+
+var removeNavBar = function removeNavBar() {
+  document.getElementsByTagName('navbar')[0].remove();
+};
+
+var addNavBar = function addNavBar() {
+  document.getElementsByClassName('main-container')[0].appendChild(navBar);
 };
 
 var scrollReveal = (0, _scrollreveal.default)({
@@ -2892,8 +2902,7 @@ var scrollReveal = (0, _scrollreveal.default)({
 
 Array.from(document.getElementsByClassName('photo-container')).map(function (el) {
   el.addEventListener('click', function (e) {
-    var navbar = document.getElementsByTagName('navbar')[0];
-    navbar.style.display = 'flex';
+    addNavBar();
     (0, _animejs.default)({
       targets: 'navbar',
       opacity: 1,
@@ -2906,7 +2915,7 @@ Array.from(document.getElementsByClassName('photo-container')).map(function (el)
           duration: 700,
           opacity: 0,
           translateX: -1000,
-          easing: 'easeInQuad',
+          easing: 'easeInCubic',
           complete: function complete() {
             removeHome();
           }
@@ -2926,6 +2935,7 @@ backButton.addEventListener('click', function (e) {
     duration: 200,
     easing: 'linear',
     complete: function complete() {
+      removeNavBar();
       (0, _animejs.default)({
         targets: '.left-nav, .right-container',
         duration: 1000,
