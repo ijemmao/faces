@@ -2855,6 +2855,9 @@ var _scrollreveal = _interopRequireDefault(require("scrollreveal"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// DOM Elements
+var leftNav = document.getElementsByClassName('left-nav')[0];
+var rightContainer = document.getElementsByClassName('right-container')[0];
 var scrollReveal = (0, _scrollreveal.default)({
   reset: true
 }); // Logo animations
@@ -2874,7 +2877,8 @@ var scrollReveal = (0, _scrollreveal.default)({
   duration: 800,
   delay: 200,
   easing: 'easeOutQuad'
-});
+}); // Transition after clicking specific image
+
 Array.from(document.getElementsByClassName('photo-container')).map(function (el) {
   el.addEventListener('click', function (e) {
     var navbar = document.getElementsByTagName('navbar')[0];
@@ -2888,12 +2892,40 @@ Array.from(document.getElementsByClassName('photo-container')).map(function (el)
       begin: function begin(anim) {
         (0, _animejs.default)({
           targets: '.left-nav, .right-container',
-          duration: 4000,
+          duration: 1000,
           opacity: 0,
-          translateX: -1000
+          translateX: -1000,
+          easing: 'easeInQuad',
+          complete: function complete() {
+            document.getElementsByClassName('left-nav')[0].remove();
+            document.getElementsByClassName('right-container')[0].remove();
+          }
         });
       }
     });
+  });
+}); // Back button
+
+var backButton = document.getElementsByClassName('back-button')[0];
+backButton.addEventListener('click', function (e) {
+  document.body.appendChild(leftNav);
+  document.body.appendChild(rightContainer);
+  (0, _animejs.default)({
+    targets: 'navbar',
+    opacity: 0,
+    translateY: -50,
+    duration: 200,
+    easing: 'linear',
+    complete: function complete(anim) {
+      (0, _animejs.default)({
+        targets: '.left-nav, .right-container',
+        duration: 1000,
+        opacity: 1,
+        translateX: 0,
+        easing: 'easeOutQuad',
+        delay: 300
+      });
+    }
   });
 });
 scrollReveal.reveal('.photo-container', {

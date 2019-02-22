@@ -21,6 +21,7 @@ h1 {
 }
 
 /* Home View  */
+
 p {
   font-family: 'EB Garamond', 'serif';
   font-weight: 500;
@@ -90,7 +91,6 @@ p::selection {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 1200px;
   margin-bottom: 30px;
 }
 
@@ -145,11 +145,13 @@ navbar {
   width: 96%;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 1;
   padding: 0vh 5vh;
 }
 
 .back-button {
   width: 80px;
+  cursor: pointer;
 }
 
 .first_name_layer {
