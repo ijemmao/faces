@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify ./src/index.js -o ./src/bundle.js -t [ babelify --presets [ @babel/preset-env ] ]",
-    "dev": "watchify ./src/index.js -o ./src/bundle.js -t [ babelify --presets [ @babel/preset-env ] ]"
+    "dev": "watchify ./src/index.js -o ./src/bundle.js -t [ babelify --presets [ @babel/preset-env ] ]",
+    "clean": "rm -rf ./src/bundle.js"
   },
   "repository": {
     "type": "git",
