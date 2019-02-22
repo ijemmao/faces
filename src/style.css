@@ -101,6 +101,12 @@ p::selection {
   background-color: black;
   border: 2px rgb(255, 243, 130, 1) solid;
   cursor: pointer;
+  box-shadow: none;
+  transition: all .1s ease-in;
+}
+
+.photo_hover {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
 }
 
 .subject-information-container {
