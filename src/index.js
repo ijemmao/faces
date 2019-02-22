@@ -49,11 +49,11 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
       opacity: 1,
       translateY: 50,
       duration: 1100,
-      delay: 700,
+      delay: 1000,
       begin: (anim) => {
         anime({
           targets: '.left-nav, .right-container',
-          duration: 1000,
+          duration: 700,
           opacity: 0,
           translateX: -1000,
           easing: 'easeInQuad',
