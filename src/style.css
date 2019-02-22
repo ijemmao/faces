@@ -91,6 +91,7 @@ p::selection {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: fit-content;
   margin-bottom: 30px;
 }
 
@@ -100,6 +101,12 @@ p::selection {
   background-color: black;
   border: 2px rgb(255, 243, 130, 1) solid;
   cursor: pointer;
+  box-shadow: none;
+  transition: all .1s ease-in;
+}
+
+.photo_hover {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
 }
 
 .subject-information-container {
@@ -117,17 +124,22 @@ p::selection {
   -webkit-text-stroke: 2px rgb(255, 243, 130, 1);
 }
 
-.subject_title:hover {
+.subject_title_hover {
   -webkit-text-fill-color: rgb(255, 243, 130, .3);
   -webkit-text-stroke: 3px rgb(255, 243, 130, 1);
 }
 
 .highlight {
   height: 30px;
-  width: 210px;
+  width: 0px;
   margin-top: -30px;
   margin-left: -90px;
   background-color: rgb(242, 114, 114, .38);
+  transition: all .2s ease-out;
+}
+
+.highlight_hover {
+  width: 210px;
 }
 
 .subject_blurb {

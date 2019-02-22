@@ -7,7 +7,6 @@ import ScrollReveal from 'scrollreveal';
 const leftNav = document.getElementsByClassName('left-nav')[0];
 const rightContainer = document.getElementsByClassName('right-container')[0];
 const navBar = document.getElementsByTagName('navbar')[0];
-console.log(navBar);
 
 // Functions
 let removeHome = () => {
@@ -47,6 +46,23 @@ anime({
   duration: 800,
   delay: 200,
   easing: 'easeOutQuad'
+});
+
+// Hover over specific image
+Array.from(document.getElementsByClassName('photo-container')).map((el, index) => {
+  const photo = document.getElementsByClassName('photo')[index];
+  const subjectTitle = document.getElementsByClassName('subject_title')[index];
+  const highlight = document.getElementsByClassName('highlight')[index];
+  el.addEventListener('mouseenter', (e) => {
+    photo.classList.add('photo_hover');
+    subjectTitle.classList.add('subject_title_hover');
+    highlight.classList.add('highlight_hover');
+  });
+  el.addEventListener('mouseleave', (e) => {
+    photo.classList.remove('photo_hover');
+    subjectTitle.classList.remove('subject_title_hover');
+    highlight.classList.remove('highlight_hover');
+  });
 });
 
 // Transition after clicking specific image
