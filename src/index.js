@@ -50,7 +50,7 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
       translateY: 50,
       duration: 1100,
       delay: 1000,
-      begin: (anim) => {
+      begin: () => {
         anime({
           targets: '.left-nav, .right-container',
           duration: 700,
@@ -76,7 +76,7 @@ backButton.addEventListener('click', (e) => {
     translateY: -50,
     duration: 200,
     easing: 'linear',
-    complete: (anim) => {
+    complete: () => {
       anime({
         targets: '.left-nav, .right-container',
         duration: 1000,
