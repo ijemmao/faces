@@ -7,6 +7,7 @@ import ScrollReveal from 'scrollreveal';
 const leftNav = document.getElementsByClassName('left-nav')[0];
 const rightContainer = document.getElementsByClassName('right-container')[0];
 const navBar = document.getElementsByTagName('navbar')[0];
+const contentContainer = document.getElementsByClassName('content-container')[0];
 
 // Functions
 let removeHome = () => {
@@ -84,6 +85,7 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
           easing: 'easeInCubic',
           complete: () => {
             removeHome();
+            contentContainer.classList.remove('hidden');
           }
         })
       }

@@ -150,6 +150,10 @@ p::selection {
 
 /* Detailed View */
 
+.hidden {
+  display: none;
+}
+
 navbar {
   position: fixed;
   display: flex;
