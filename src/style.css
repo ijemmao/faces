@@ -150,6 +150,10 @@ p::selection {
 
 /* Detailed View */
 
+.content-container {
+  opacity: 0;
+}
+
 navbar {
   position: fixed;
   display: flex;
@@ -180,4 +184,196 @@ navbar {
 .third_name_layer {
   -webkit-text-stroke: 2px rgb(255, 243, 130, .1);
   margin-top: -60px;
+}
+
+.wide, .large, .medium, .small {
+  position: absolute;
+  cursor: auto;
+}
+
+.wide {
+  max-width: 1450px;
+  max-height: 860px;
+  width: 88%;
+  height: 96%;
+}
+
+.large {
+  height: 693px;
+  width: 560px;
+}
+
+.medium {
+  height: 523px;
+  width: 420px;
+}
+
+.small {
+  height: 446px;
+  width: 360px;
+}
+
+/* Individual Images */
+
+#_1 {
+  top: 120px;
+  left: 60px;
+}
+
+#_2 {
+  top: 50px;
+  left: 460px;
+}
+
+#_3 {
+  top: 510px;
+  left: 1160px;
+}
+
+#_4 {
+  top: 1200px;
+  left: 130px;  
+}
+
+#_5 {
+  top: 1150px;
+  left: 960px;
+}
+
+#_6 {
+  top: 1700px;
+  left: 800px;
+}
+
+#_7 {
+  top: 2050px;
+  left: 160px;
+}
+
+#_8 {
+  top: 2500px;
+  left: 1120px;
+}
+
+#_9 {
+  top: 3260px;
+  left: 100px;
+}
+
+/* Text */
+
+.details {
+  position: absolute;
+  text-align: left;
+  width: 280px;
+}
+
+#intro-container {
+  left: 1200px;
+  width: 280px;
+}
+
+.bodega {
+  text-align: center;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.quote {
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.qa {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+#_1-text {
+  top: 180px;
+  left: 860px;
+}
+
+#_2-text {
+  top: 570px;
+  left: 760px;
+}
+
+#_3-text {
+  top: 960px;
+  left: 1200px;
+}
+
+#_4-text {
+  top: 880px;
+  left: 180px;
+}
+
+#_5-text {
+  text-align: right;
+  top: 990px;
+  left: 650px;
+}
+
+#_6-text {
+  top: 1400px;
+  left: 580px;
+}
+
+#_7-text {
+  top: 1750px;
+  left: 600px;
+}
+
+#_8-text {
+  top: 1600px;
+  left: 1400px;
+}
+
+#_9-text {
+  top: 2100px;
+  left: 800px;
+}
+
+#_10-text {
+  top: 2000px;
+  left: 1200px;
+}
+
+#_11-text {
+  top: 1930px;
+  left: 100px;
+}
+
+#_12-text {
+  text-align: right;
+  top: 2400px;
+  left: 500px;
+}
+
+#_13-text {
+  top: 2600px;
+  left: 170px;
+}
+
+#_14-text {
+  top: 2700px;
+  left: 820px;
+}
+
+#_15-text {
+  top: 2850px;
+  left: 300px;
+}
+
+#_16-text {
+  top: 3000px;
+  left: 1000px;
+}
+
+#_17-text {
+  top: 4100px;
+  left: 100px;
 }
