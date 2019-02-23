@@ -189,7 +189,7 @@ navbar {
 
 .wide {
   max-width: 1450px;
-  max-height: 960px;
+  max-height: 860px;
   width: 88%;
   height: 96%;
 }
@@ -252,7 +252,7 @@ navbar {
 }
 
 #_9 {
-  top: 3200px;
+  top: 3260px;
   left: 100px;
 }
 
@@ -267,6 +267,13 @@ navbar {
 #intro-container {
   left: 1200px;
   width: 280px;
+}
+
+.bodega {
+  text-align: center;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 48px;
 }
 
 .quote {
@@ -360,4 +367,9 @@ navbar {
 #_16-text {
   top: 3000px;
   left: 1000px;
+}
+
+#_17-text {
+  top: 4100px;
+  left: 100px;
 }
