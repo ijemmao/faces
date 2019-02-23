@@ -28,6 +28,16 @@ let addNavBar = () => {
   document.getElementsByClassName('main-container')[0].appendChild(navBar);
 }
 
+let removeContent = () => {
+  document.getElementsByClassName('content-container')[0].remove();
+}
+
+let addContent = () => {
+  document.getElementsByClassName('main-container')[0].appendChild(contentContainer);
+}
+
+removeContent();
+
 const scrollReveal = ScrollReveal({ reset: true });
 
 // Logo animations
@@ -84,8 +94,18 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
           translateX: -1000,
           easing: 'easeInCubic',
           complete: () => {
+            window.scroll(0, 0);
             removeHome();
-            contentContainer.classList.remove('hidden');
+            addContent();
+            scrollReveal.reveal('.large');
+            scrollReveal.reveal('.medium');
+            scrollReveal.reveal('.small');
+            anime({
+              targets: '.content-container',
+              opacity: 1,
+              duration: 4000,
+              delay: 500,
+            })
           }
         })
       }
@@ -97,7 +117,6 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
 const backButton = document.getElementsByClassName('back-button')[0];
 backButton.addEventListener('click', (e) => {
   addHome();
-  contentContainer.classList.add('hidden');
   anime({
     targets: 'navbar',
     opacity: 0,

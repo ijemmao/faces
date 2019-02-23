@@ -150,8 +150,8 @@ p::selection {
 
 /* Detailed View */
 
-.hidden {
-  display: none;
+.content-container {
+  opacity: 0;
 }
 
 navbar {
