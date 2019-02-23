@@ -139,6 +139,16 @@ backButton.addEventListener('click', (e) => {
       })
     }
   })
+  anime({
+    targets: '.content-container',
+    opacity: 0,
+    duration: 500,
+    delay: 100,
+    easing: 'linear',
+    complete: () => {
+      removeContent();
+    }
+  })
 });
 
 scrollReveal.reveal('.photo-container', { delay: 100 });
