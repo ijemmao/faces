@@ -110,6 +110,10 @@ backButton.addEventListener('click', (e) => {
         translateX: 0,
         easing: 'easeOutQuad',
         delay: 300,
+        complete: () => {
+          leftNav.style.transform = 'none';
+          rightContainer.style.transform = 'none';
+        }
       })
     }
   })
