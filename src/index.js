@@ -97,6 +97,7 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
 const backButton = document.getElementsByClassName('back-button')[0];
 backButton.addEventListener('click', (e) => {
   addHome();
+  contentContainer.classList.add('hidden');
   anime({
     targets: 'navbar',
     opacity: 0,
