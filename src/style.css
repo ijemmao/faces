@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:100,200,400,500,700');
 @font-face {
   font-family: Heading-Pro-Wide;
   src: url('../assets/fonts/Heading-Pro-Wide-Black-trial.ttf');
@@ -8,6 +8,7 @@
 body {
   background: #48633E;
   color: #FFF382;
+  font-size: 18px;
 }
 
 h1 {
@@ -23,8 +24,8 @@ h1 {
 /* Home View  */
 
 p {
-  font-family: 'EB Garamond', 'serif';
-  font-weight: 500;
+  font-family: 'EB Garamond', Georgia, 'serif';
+  margin: 0;
 }
 
 .main-container {
@@ -226,8 +227,8 @@ navbar {
 }
 
 #_3 {
-  top: 510px;
-  left: 1160px;
+  top: 580px;
+  left: 1060px;
 }
 
 #_4 {
@@ -268,22 +269,38 @@ navbar {
   width: 280px;
 }
 
+.details p:last-child {
+  font-weight: 200;
+}
+
+.details p:first-child {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
 #intro-container {
-  left: 1200px;
+  font-weight: 500;
+  font-size: 20px;
+  left: 1320px;
+  top: 180px;
   width: 280px;
+  border-left: 10px solid rgb(242, 114, 114, .38);
+  padding-left: 20px;
 }
 
 .bodega {
   text-align: center;
   width: fit-content;
-  font-weight: 700;
+  font-weight: 700 !important;
   font-size: 48px;
 }
 
 .quote {
-  text-align: center;
+  text-align: left;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 32px;
+  border-left: 10px solid rgb(242, 114, 114, .38);
+  padding-left: 20px;
 }
 
 .qa {
@@ -292,18 +309,19 @@ navbar {
 }
 
 #_1-text {
-  top: 180px;
+  top: 200px;
   left: 860px;
 }
 
 #_2-text {
-  top: 570px;
-  left: 760px;
+  top: 520px;
+  left: 660px;
 }
 
 #_3-text {
-  top: 960px;
+  top: 840px;
   left: 1200px;
+  width: 400px;
 }
 
 #_4-text {
@@ -318,18 +336,19 @@ navbar {
 }
 
 #_6-text {
-  top: 1400px;
-  left: 580px;
+  top: 1450px;
+  left: 420px;
+  width: 400px;
 }
 
 #_7-text {
   top: 1750px;
-  left: 600px;
+  left: 700px;
 }
 
 #_8-text {
-  top: 1600px;
-  left: 1400px;
+  top: 1150px;
+  left: 1300px;
 }
 
 #_9-text {
@@ -361,6 +380,7 @@ navbar {
 #_14-text {
   top: 2700px;
   left: 820px;
+  width: 500px;
 }
 
 #_15-text {
