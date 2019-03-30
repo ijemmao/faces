@@ -135,6 +135,9 @@ backButton.addEventListener('click', (e) => {
         complete: () => {
           leftNav.style.transform = 'none';
           rightContainer.style.transform = 'none';
+          Array.from(document.getElementsByClassName("photo-container")).forEach(el => {
+            el.style.opacity = "1";
+          });
         }
       })
     }
