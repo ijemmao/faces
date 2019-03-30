@@ -103,9 +103,8 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
             anime({
               targets: '.content-container',
               opacity: 1,
-              duration: 700,
+              duration: 4000,
               delay: 500,
-              easing: 'linear'
             })
           }
         })
@@ -117,6 +116,7 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
 // Back button
 const backButton = document.getElementsByClassName('back-button')[0];
 backButton.addEventListener('click', (e) => {
+  addHome();
   anime({
     targets: 'navbar',
     opacity: 0,
@@ -125,7 +125,6 @@ backButton.addEventListener('click', (e) => {
     easing: 'linear',
     complete: () => {
       removeNavBar();
-      addHome();
       anime({
         targets: '.left-nav, .right-container',
         duration: 1000,
