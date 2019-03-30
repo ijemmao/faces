@@ -2,12 +2,43 @@
 
 import anime from 'animejs';
 import ScrollReveal from 'scrollreveal';
+import ejs from 'ejs';
+
+// Dynamic Information
+let subjects = ['Vanessa', 'Sofia', 'Young', 'Kenny', 'Sarah', 'Aaron', 'Annie'];
+let subjectHTML = ejs.render(`
+<div class="right-container">
+  <% for (let i = 0; i < subjects.length; i++) { %>
+  <div class="photo-container">
+      <div class="photo"></div>
+      <div class="subject-information-container">
+        <h1 class="subject_title"><%= subjects[i] %></h1>
+        <div class="highlight"></div>
+        <p class="subject_blurb">a small header about the person that is being featured right here</p>
+      </div>
+    </div>
+  <% } %>
+</div>
+`, { subjects: subjects })
+
+function htmlToElement(html) {
+  var template = document.createElement('template');
+  html = html.trim(); // Never return a text node of whitespace as the result
+  template.innerHTML = html;
+  return template.content.firstChild;
+}
+
+document.getElementsByClassName('main-container')[0].appendChild(htmlToElement(subjectHTML))
 
 // DOM Elements
 const leftNav = document.getElementsByClassName('left-nav')[0];
 const rightContainer = document.getElementsByClassName('right-container')[0];
 const navBar = document.getElementsByTagName('navbar')[0];
 const contentContainer = document.getElementsByClassName('content-container')[0];
+
+let photoContainers = htmlToElement(html);
+console.log(photoContainers)
+// rightContainer.appendChild(photoContainers);
 
 // Functions
 let removeHome = () => {
