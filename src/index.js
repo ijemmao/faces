@@ -5,7 +5,7 @@ import ScrollReveal from 'scrollreveal';
 import ejs from 'ejs';
 
 // Dynamic Information
-let subjects = ['Vanessa', 'Sofia', 'Young', 'Kenny', 'Sarah', 'Aaron', 'Annie'];
+let subjects = ['Vanessa', 'Sofia', 'Young', 'Kenny', 'Sarah', 'Aaron', 'Peyton', 'Annie', 'Sydney', 'Summer', 'Isabel', 'Leeya', 'Jasmine', 'Lillian', 'Adam'];
 let subjectHTML = ejs.render(`
 <div class="right-container">
   <% for (let i = 0; i < subjects.length; i++) { %>
@@ -21,7 +21,7 @@ let subjectHTML = ejs.render(`
 </div>
 `, { subjects: subjects })
 
-function htmlToElement(html) {
+let htmlToElement = (html) => {
   var template = document.createElement('template');
   html = html.trim(); // Never return a text node of whitespace as the result
   template.innerHTML = html;
@@ -35,10 +35,6 @@ const leftNav = document.getElementsByClassName('left-nav')[0];
 const rightContainer = document.getElementsByClassName('right-container')[0];
 const navBar = document.getElementsByTagName('navbar')[0];
 const contentContainer = document.getElementsByClassName('content-container')[0];
-
-let photoContainers = htmlToElement(html);
-console.log(photoContainers)
-// rightContainer.appendChild(photoContainers);
 
 // Functions
 let removeHome = () => {
