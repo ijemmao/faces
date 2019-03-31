@@ -5,14 +5,30 @@ import ScrollReveal from 'scrollreveal';
 import ejs from 'ejs';
 
 // Dynamic Information
-let subjects = ['Vanessa', 'Sofia', 'Young', 'Kenny', 'Sarah', 'Aaron', 'Peyton', 'Annie', 'Sydney', 'Summer', 'Isabel', 'Leeya', 'Jasmine', 'Lillian', 'Adam'];
+let subjects = [
+  { name: 'Vanessa' },
+  { name: 'Sofia' },
+  { name: 'Young' },
+  { name: 'Kenny' },
+  { name: 'Sarah' },
+  { name: 'Aaron' },
+  { name: 'Peyton' },
+  { name: 'Annie' },
+  { name: 'Sydney' },
+  { name: 'Summer' },
+  { name: 'Isabel' },
+  { name: 'Leeya' },
+  { name: 'Jasmine' },
+  { name: 'Lillian' },
+  { name: 'Adam' }
+];
 let subjectHTML = ejs.render(`
 <div class="right-container">
   <% for (let i = 0; i < subjects.length; i++) { %>
   <div class="photo-container">
       <div class="photo"></div>
       <div class="subject-information-container">
-        <h1 class="subject_title"><%= subjects[i] %></h1>
+        <h1 class="subject_title"><%= subjects[i].name %></h1>
         <div class="highlight"></div>
         <p class="subject_blurb">a small header about the person that is being featured right here</p>
       </div>
