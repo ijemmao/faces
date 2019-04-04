@@ -269,7 +269,9 @@ navbar {
 }
 
 #intro-container {
-  left: 1200px;
+  font-size: 1.2em;
+  top: 200px;
+  right: 100px;
   width: 280px;
   padding-left: 10px;
   border-left: 10px solid rgb(242, 114, 114, .38);
@@ -278,7 +280,7 @@ navbar {
 #intro-container p {
   margin: 0 0 10px 0;
   font-style: italic;
-  color: #FFF382;
+  color: #fff7b9;
 }
 
 .bodega {
@@ -291,7 +293,15 @@ navbar {
 .quote {
   text-align: center;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 1.6em;
+  width: 400px;
+  padding-left: 10px;
+  border-left: 10px solid rgb(242, 114, 114, .38);
+  color: #fff7b9;
+}
+
+.quote p {
+  margin: 0;
 }
 
 .qa {
@@ -310,8 +320,8 @@ navbar {
 }
 
 #_3-text {
-  top: 960px;
-  left: 1200px;
+  top: 970px;
+  left: 1130px;
 }
 
 #_4-text {
@@ -341,8 +351,8 @@ navbar {
 }
 
 #_9-text {
-  top: 2100px;
-  left: 800px;
+  top: 2120px;
+  left: 760px;
 }
 
 #_10-text {
