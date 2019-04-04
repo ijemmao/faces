@@ -292,10 +292,10 @@ navbar {
 }
 
 .quote {
-  text-align: center;
+  text-align: left;
   font-weight: 500;
   font-size: 1.6em;
-  width: 400px;
+  width: 500px;
   padding-left: 10px;
   border-left: 10px solid rgb(242, 114, 114, .38);
   color: #fff7b9;
