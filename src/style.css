@@ -217,18 +217,18 @@ navbar {
 /* Individual Images */
 
 #_1 {
-  top: 120px;
-  left: 60px;
+  top: 10vh;
+  left: 5vw;
 }
 
 #_2 {
-  top: 50px;
-  left: 460px;
+  top: 5vh;
+  left: 20vw;
 }
 
 #_3 {
-  top: 510px;
-  left: 1160px;
+  top: 80vh;
+  left: 47vw;
 }
 
 #_4 {
@@ -311,23 +311,23 @@ navbar {
 }
 
 #_1-text {
-  top: 180px;
-  left: 860px;
+  top: 12vh;
+  left: 35vw;
 }
 
 #_2-text {
-  top: 570px;
-  left: 760px;
+  top: 61vh;
+  left: 30vw;
 }
 
 #_3-text {
-  top: 970px;
-  left: 1130px;
+  top: 127vh;
+  left: 45vw;
 }
 
 #_4-text {
-  top: 880px;
-  left: 180px;
+  top: 100vh;
+  left: 8vw;
 }
 
 #_5-text {
