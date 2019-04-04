@@ -271,6 +271,14 @@ navbar {
 #intro-container {
   left: 1200px;
   width: 280px;
+  padding-left: 10px;
+  border-left: 10px solid rgb(242, 114, 114, .38);
+}
+
+#intro-container p {
+  margin: 0 0 10px 0;
+  font-style: italic;
+  color: #FFF382;
 }
 
 .bodega {
