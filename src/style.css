@@ -36,6 +36,10 @@ p {
   font-size: 1.2em;
 }
 
+div p:first-child {
+  font-weight: bold;
+}
+
 .main-container {
   width: 100%;
   display: flex;
