@@ -59,16 +59,9 @@ sections.forEach((section) => {
   console.log(firstChild)
   var firstRect = firstChild.getBoundingClientRect();
   var lastRect  = lastChild.getBoundingClientRect();
-  // console.log(section);
-  // console.log(rect.top, rect.right, rect.bottom, rect.left);
   section.style.height = `${lastRect.bottom - firstRect.top}px`;
   section.style.width = `100vw`;
 })
-// Set heights of each section
-// Array.from(document.getElementsByClassName('sections')[0].childNodes).forEach((section) => {
-//   console.log(sections);
-// });
-
 // Functions
 let removeHome = () => {
   document.getElementsByClassName('left-nav')[0].remove();
