@@ -52,6 +52,23 @@ const rightContainer = document.getElementsByClassName('right-container')[0];
 const navBar = document.getElementsByTagName('navbar')[0];
 const contentContainer = document.getElementsByClassName('content-container')[0];
 
+const sections = Array.from(document.getElementsByClassName('sections')[0].childNodes).filter(item => item.nodeName != '#text');
+sections.forEach((section) => {
+  const firstChild = section.childNodes[1];
+  const lastChild = section.childNodes[section.childNodes.length - 2];
+  console.log(firstChild)
+  var firstRect = firstChild.getBoundingClientRect();
+  var lastRect  = lastChild.getBoundingClientRect();
+  // console.log(section);
+  // console.log(rect.top, rect.right, rect.bottom, rect.left);
+  section.style.height = `${lastRect.bottom - firstRect.top}px`;
+  section.style.width = `100vw`;
+})
+// Set heights of each section
+// Array.from(document.getElementsByClassName('sections')[0].childNodes).forEach((section) => {
+//   console.log(sections);
+// });
+
 // Functions
 let removeHome = () => {
   document.getElementsByClassName('left-nav')[0].remove();

@@ -21,6 +21,10 @@ h1 {
 }
 
 h2 {
+  position: relative;
+  width: 100vw;
+  z-index: 1;
+  left: 3vw;
   font-size: 3em;
 }
 
