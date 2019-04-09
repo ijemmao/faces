@@ -2,12 +2,72 @@
 
 import anime from 'animejs';
 import ScrollReveal from 'scrollreveal';
+import ejs from 'ejs';
+
+// Dynamic Information
+let subjects = [
+  { name: 'Vanessa' },
+  { name: 'Sofia' },
+  { name: 'Young' },
+  { name: 'Kenny' },
+  { name: 'Sarah' },
+  { name: 'Aaron' },
+  { name: 'Peyton' },
+  { name: 'Annie' },
+  { name: 'Sydney' },
+  { name: 'Summer' },
+  { name: 'Isabel' },
+  { name: 'Leeya' },
+  { name: 'Jasmine' },
+  { name: 'Lillian' },
+  { name: 'Adam' }
+];
+let subjectHTML = ejs.render(`
+<div class="right-container">
+  <% for (let i = 0; i < subjects.length; i++) { %>
+  <div class="photo-container">
+      <div class="photo"></div>
+      <div class="subject-information-container">
+        <h1 class="subject_title"><%= subjects[i].name %></h1>
+        <div class="highlight"></div>
+        <p class="subject_blurb">a small header about the person that is being featured right here</p>
+      </div>
+    </div>
+  <% } %>
+</div>
+`, { subjects: subjects })
+
+let htmlToElement = (html) => {
+  var template = document.createElement('template');
+  html = html.trim(); // Never return a text node of whitespace as the result
+  template.innerHTML = html;
+  return template.content.firstChild;
+}
+
+document.getElementsByClassName('main-container')[0].appendChild(htmlToElement(subjectHTML))
 
 // DOM Elements
 const leftNav = document.getElementsByClassName('left-nav')[0];
 const rightContainer = document.getElementsByClassName('right-container')[0];
 const navBar = document.getElementsByTagName('navbar')[0];
 const contentContainer = document.getElementsByClassName('content-container')[0];
+
+const sections = Array.from(document.getElementsByClassName('sections')[0].childNodes).filter(item => item.nodeName != '#text');
+sections.forEach((section) => {
+  const firstChild = section.childNodes[1];
+  const lastChild = section.childNodes[section.childNodes.length - 2];
+  console.log(firstChild)
+  var firstRect = firstChild.getBoundingClientRect();
+  var lastRect  = lastChild.getBoundingClientRect();
+  // console.log(section);
+  // console.log(rect.top, rect.right, rect.bottom, rect.left);
+  section.style.height = `${lastRect.bottom - firstRect.top}px`;
+  section.style.width = `100vw`;
+})
+// Set heights of each section
+// Array.from(document.getElementsByClassName('sections')[0].childNodes).forEach((section) => {
+//   console.log(sections);
+// });
 
 // Functions
 let removeHome = () => {
@@ -39,6 +99,7 @@ let addContent = () => {
 removeContent();
 
 const scrollReveal = ScrollReveal({ reset: true });
+const scrollRevealNoReset = ScrollReveal({ reset: false });
 
 // Logo animations
 anime({
@@ -97,9 +158,9 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
             window.scroll(0, 0);
             removeHome();
             addContent();
-            scrollReveal.reveal('.large');
-            scrollReveal.reveal('.medium');
-            scrollReveal.reveal('.small');
+            scrollRevealNoReset.reveal('.large');
+            scrollRevealNoReset.reveal('.medium');
+            scrollRevealNoReset.reveal('.small');
             anime({
               targets: '.content-container',
               opacity: 1,
@@ -135,6 +196,9 @@ backButton.addEventListener('click', (e) => {
         complete: () => {
           leftNav.style.transform = 'none';
           rightContainer.style.transform = 'none';
+          Array.from(document.getElementsByClassName("photo-container")).forEach(el => {
+            el.style.opacity = "1";
+          });
         }
       })
     }
