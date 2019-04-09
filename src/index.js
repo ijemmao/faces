@@ -3,6 +3,7 @@
 import anime from 'animejs';
 import ScrollReveal from 'scrollreveal';
 import ejs from 'ejs';
+import vanessa from './../data/vanessa_chhoa/transcript'
 
 // Dynamic Information
 let subjects = [
@@ -52,6 +53,7 @@ const rightContainer = document.getElementsByClassName('right-container')[0];
 const navBar = document.getElementsByTagName('navbar')[0];
 const contentContainer = document.getElementsByClassName('content-container')[0];
 
+// Setting Height of Sections
 const sections = Array.from(document.getElementsByClassName('sections')[0].childNodes).filter(item => item.nodeName != '#text');
 sections.forEach((section) => {
   const firstChild = section.childNodes[1];
@@ -62,6 +64,19 @@ sections.forEach((section) => {
   section.style.height = `${lastRect.bottom - firstRect.top}px`;
   section.style.width = `100vw`;
 })
+
+// Injecting Data into Page
+for (let i = 1; i < 24; i++) {
+  const idName = `_${i}-text`
+  const firstChild = document.getElementById(idName).childNodes[1]
+  if (firstChild) {
+    firstChild.innerHTML = vanessa[idName] ? vanessa[idName][0] : 'ijemma'
+    if (document.getElementById(idName).childNodes[3]) {
+      document.getElementById(idName).childNodes[3].innerHTML = vanessa[idName] ? vanessa[idName][1] : 'ijemma'
+    }
+  }
+}
+
 // Functions
 let removeHome = () => {
   document.getElementsByClassName('left-nav')[0].remove();
