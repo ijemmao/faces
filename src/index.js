@@ -82,6 +82,7 @@ let addContent = () => {
 removeContent();
 
 const scrollReveal = ScrollReveal({ reset: true });
+const scrollRevealNoReset = ScrollReveal({ reset: false });
 
 // Logo animations
 anime({
@@ -140,9 +141,9 @@ Array.from(document.getElementsByClassName('photo-container')).map((el) => {
             window.scroll(0, 0);
             removeHome();
             addContent();
-            scrollReveal.reveal('.large');
-            scrollReveal.reveal('.medium');
-            scrollReveal.reveal('.small');
+            scrollRevealNoReset.reveal('.large');
+            scrollRevealNoReset.reveal('.medium');
+            scrollRevealNoReset.reveal('.small');
             anime({
               targets: '.content-container',
               opacity: 1,

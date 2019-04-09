@@ -20,6 +20,10 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-size: 3em;
+}
+
 /* Home View  */
 
 p {
@@ -223,41 +227,46 @@ navbar {
 
 #_2 {
   top: 5vh;
-  left: 20vw;
+  left: 25vw;
 }
 
 #_3 {
-  top: 80vh;
-  left: 47vw;
+  top: 90vh;
+  left: 55vw;
 }
 
 #_4 {
-  top: 1200px;
-  left: 130px;  
+  top: 200vh;
+  left: 15vh;  
 }
 
 #_5 {
-  top: 1150px;
-  left: 960px;
+  top: 200vh;
+  left: 55vw;
 }
 
 #_6 {
-  top: 1700px;
-  left: 800px;
+  top: 240vh;
+  left: 45vw;
 }
 
 #_7 {
-  top: 2050px;
+  top: 330vh;
   left: 160px;
 }
 
 #_8 {
-  top: 2500px;
-  left: 1120px;
+  top: 330vh;
+  left: 60vw;
+}
+
+#_9 {
+  top: 375vh;
+  left: 35vw;
 }
 
 #_13 {
-  top: 3260px;
+  top: 500vh;
   left: 100px;
 }
 
@@ -316,78 +325,108 @@ navbar {
 }
 
 #_2-text {
-  top: 61vh;
+  top: 75vh;
   left: 30vw;
 }
 
 #_3-text {
-  top: 127vh;
-  left: 45vw;
+  top: 134vh;
+  left: 55vw;
 }
 
 #_4-text {
-  top: 100vh;
-  left: 8vw;
+  top: 110vh;
+  left: 12vw;
 }
 
 #_5-text {
   text-align: right;
-  top: 990px;
-  left: 650px;
+  top: 145vh;
+  left: 35vw;  
 }
 
 #_6-text {
-  top: 1400px;
+  top: 190vh;
   left: 580px;
 }
 
 #_7-text {
-  top: 1750px;
-  left: 600px;
+  top: 215vh;
+  left: 35vw;
 }
 
 #_8-text {
-  top: 1600px;
-  left: 1400px;
+  top: 230vh;
+  left: 80vw;
 }
 
 #_9-text {
-  top: 2120px;
-  left: 760px;
+  top: 280vh;
+  left: 45vw;
 }
 
 #_10-text {
-  top: 2000px;
-  left: 1200px;
+  top: 260vh;
+  left: 15vw;
 }
 
 #_11-text {
-  top: 1930px;
-  left: 100px;
+  top: 280vh;
+  left: 70vw;
 }
 
 #_12-text {
   text-align: right;
-  top: 2400px;
-  left: 500px;
+  top: 330vh;
+  left: 23vw;
 }
 
 #_13-text {
-  top: 2600px;
-  left: 170px;
+  top: 330vh;
+  left: 50vw;
 }
 
 #_14-text {
-  top: 2700px;
-  left: 820px;
+  top: 370vh;
+  left: 15vw;
 }
 
 #_15-text {
-  top: 2850px;
-  left: 300px;
+  top: 380vh;
+  left: 65vw;
 }
 
 #_16-text {
+  top: 410vh;
+  left: 10vw;
+}
+
+#_17-text {
+  top: 440vh;
+  left: 60vw;
+}
+
+#_18-text {
+  top: 3000px;
+  left: 1000px;
+}
+
+#_19-text {
+  top: 3000px;
+  left: 1000px;
+}
+
+#_20-text {
+  top: 3000px;
+  left: 1000px;
+}
+
+#_21-text {
+  top: 3000px;
+  left: 1000px;
+}
+
+#_22-text {
   top: 3000px;
   left: 1000px;
 }
