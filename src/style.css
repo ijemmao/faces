@@ -265,8 +265,23 @@ navbar {
   left: 35vw;
 }
 
-#_13 {
+#_10 {
   top: 500vh;
+  left: 10vw;
+}
+
+#_11 {
+  top: 560vh;
+  left: 40vw;
+}
+
+#_12 {
+  top: 625vh;
+  left: 70vw;
+}
+
+#_13 {
+  top: 700vh;
   left: 100px;
 }
 
@@ -321,7 +336,7 @@ navbar {
 
 #_1-text {
   top: 12vh;
-  left: 35vw;
+  left: 45vw;
 }
 
 #_2-text {
@@ -387,7 +402,7 @@ navbar {
 }
 
 #_14-text {
-  top: 370vh;
+  top: 390vh;
   left: 15vw;
 }
 
@@ -397,7 +412,7 @@ navbar {
 }
 
 #_16-text {
-  top: 410vh;
+  top: 430vh;
   left: 10vw;
 }
 
@@ -407,31 +422,36 @@ navbar {
 }
 
 #_18-text {
-  top: 3000px;
-  left: 1000px;
+  top: 500vh;
+  left: 30vw;
 }
 
 #_19-text {
-  top: 3000px;
-  left: 1000px;
+  top: 510vh;
+  left: 75vw;
 }
 
 #_20-text {
-  top: 3000px;
-  left: 1000px;
+  top: 550vh;
+  left: 40vw;
 }
 
 #_21-text {
-  top: 3000px;
-  left: 1000px;
+  top: 570vh;
+  left: 12vw;
 }
 
 #_22-text {
-  top: 3000px;
-  left: 1000px;
+  top: 620vh;
+  left: 20vw;
 }
 
 #_23-text {
-  top: 4100px;
-  left: 100px;
+  top: 650vh;
+  left: 50vw;
+}
+
+#_24-text {
+  top: 775vh;
+  left: 7vw;
 }
